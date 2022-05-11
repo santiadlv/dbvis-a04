@@ -1,0 +1,2 @@
+Aside from the already implemented visual variables (Position, Size & Color), what are two further visual variables that could be used to encode more information on the scatterplot?
+Give two examples on which data dimension could be encoded by which visual variable.

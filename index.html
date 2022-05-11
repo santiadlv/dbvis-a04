@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <title>Data Vis - Assignment 04</title>
+  <script src="d3.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <fieldset>
+    <div class="select-container">
+      <label for="x-axis-select">X Axis</label>
+      <select id="x-axis-select" class="selector"></select>  
+    </div>
+    <div class="select-container">
+      <label for="y-axis-select">Y Axis</label>
+      <select id="y-axis-select" class="selector"></select>  
+    </div>
+    <div class="select-container">
+      <label for="color-select">Color</label>
+      <select id="color-select" class="selector"></select>  
+    <div id="color-select-legend">
+      </div>
+    </div>
+    <div class="select-container">
+      <label for="size-select">Size</label>
+      <select id="size-select" class="selector"></select>  
+    </div>
+  </fieldset>
+  <svg id="chart">
+    <g id="vis-g">
+      <g id="scatter-points"></g>
+      <g id="x-axis"></g>
+      <g id="y-axis"></g>  
+    </g>
+  </svg>
+
+  <script src="data.js"></script>
+  <script src="index.js"></script>
+</body>

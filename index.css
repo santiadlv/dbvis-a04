@@ -1,0 +1,27 @@
+/* does the animation for the circles */
+circle {
+    transition: all 1s cubic-bezier(0.32, 0.11, 0.13, 2.2);
+}
+
+/* styling for axis labels */
+text.axis-label {
+    font-size: x-small;
+    text-anchor: middle;
+    dominant-baseline: text-after-edge;
+}
+
+div#color-select-legend {
+    display: flex;
+    flex-direction: column;
+}
+
+/* styling for the select tags */
+fieldset {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.select-container {
+    display: flex;
+    flex-direction: column;
+}
