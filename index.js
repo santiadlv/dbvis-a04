@@ -107,6 +107,7 @@ var selectX = d3.select("#x-axis-select")
                 .enter()
                 .append('option')
                   .text(d => d)
+                  .attr('id', d => d);
 
 var selectY = d3.select("#y-axis-select")
                 .selectAll("option")
@@ -114,6 +115,7 @@ var selectY = d3.select("#y-axis-select")
                 .enter()
                 .append('option')
                   .text(d => d)
+                  .attr('id', d => d);
 
 var selectSize = d3.select("#size-select")
                 .selectAll("option")
@@ -121,6 +123,7 @@ var selectSize = d3.select("#size-select")
                 .enter()
                 .append('option')
                   .text(d => d)
+                  .attr('id', d => d);
 
 var selectColor = d3.select("#color-select")
                     .selectAll("option")
@@ -128,13 +131,12 @@ var selectColor = d3.select("#color-select")
                     .enter()
                     .append('option')
                       .text(d => d)
+                      .attr('id', d => d);
 
 d3.selectAll("select")
   .on('change', (event, d) => {
     var selectorID = event.currentTarget.id;
     var selectorValue = event.currentTarget.value;
-
-    update(selectorID, selectorValue);
 
     switch (selectorID) {
       case "x-axis-select":
@@ -251,13 +253,19 @@ var sizeChange = (newDim) => {
 }
 
 var update = (selectorNode, dimension) => {
-  var selector = d3.select(`#${selectorNode}`)
-                   .selectedOptions([dimension]);
+  var parent = d3.select(`#${selectorNode}`);
+  var child = parent.select(`#${dimension}`);
+  
+  child
+    .attr('selected', 'selected');
 }
 
-
 //initialize the scales
+update("x-axis-select", 'culmen_length_mm')
 xAxisChange('culmen_length_mm')
+update("y-axis-select", 'culmen_depth_mm')
 yAxisChange('culmen_depth_mm')
+update("color-select", 'species')
 colorChange('species')
+update("size-select", 'body_mass_g')
 sizeChange('body_mass_g')

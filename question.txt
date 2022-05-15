@@ -1,2 +1,8 @@
 Aside from the already implemented visual variables (Position, Size & Color), what are two further visual variables that could be used to encode more information on the scatterplot?
 Give two examples on which data dimension could be encoded by which visual variable.
+
+We can make use of different shapes in order to better visualize one of the categorical dimensions. For example, showcasing male gender as circles and female gender as squares.
+
+Another dimension we could use is texture, also for categorical dimensions. This visual variable could represent the species of each of the penguins, with a dotted texture meaning Adelie, a striped texture meaning Chinstrap and finally a plain texture meaning Gentoo.
+
+Last but not least we could make use of contours over the datapoints to reference categorical (binary, moreover). Going back again to gender, males could have a contour over their shape and females should have no contour at all.
